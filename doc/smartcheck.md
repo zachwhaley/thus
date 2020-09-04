@@ -1,7 +1,9 @@
-##SmartCheck
+## SmartCheck
+
 Install thus as normal. 
 
 ## Getting Started
+
 Before using thus, you need to provide credentials and hostnames of your services.
 You do this by creating a config file. The file should be placed in `~/.thus/credentials`
 
@@ -22,6 +24,7 @@ profiles for more servers.
 **Note** The `/api` should **not** be appended to the end of the URL. 
 
 ## Using both Deep Security and Smartheck in the configuration
+
 To add Deep Security credentials and configuration to same section, `[default]` you need only to append the values. 
 
 For the credentials file in  `~/.thus/credentials`

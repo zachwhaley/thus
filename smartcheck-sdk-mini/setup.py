@@ -11,13 +11,13 @@ install_requires = [
 
 setup_options = dict(
     name="smartcheck-sdk-mini",
-    version='0.00.8',
+    version='0.00.9',
     author="Brendan Johnson",
-    author_email="brendan.johnson@gmail.com",
+    author_email="brendan_johnson@trendmicro.com",
     description="A lightweight SDK for Trend Micro Smart Check",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/johnsobm/smartcheck-sdk-mini",
+    url="https://github.com/trendmicro/thus/smartcheck-sdk-mini",
     packages=setuptools.find_packages(),
     classifiers=[
         'Intended Audience :: Developers',

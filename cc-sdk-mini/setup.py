@@ -1,31 +1,27 @@
 import setuptools
 import sys
 from setuptools import setup, find_packages
-from thus.__init__ import __version__
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 install_requires = [
     'requests',
-    'PyYAML>=3.10,<5.3',
-    'ds-sdk-mini>=0.0.7',
-    'smartcheck-sdk-mini>=0.0.6'
+    'urllib3'
 ]
 
 setup_options = dict(
-    name="thus",
-    version=__version__,
+    name="cc-sdk-mini", # Replace with your own username
+    version='0.00.01',
     author="Brendan Johnson",
     author_email="brendan_johnson@trendmicro.com",
-    description="A cli tool for use with Trend Micro products.",
+    description="A lightweight SDK for Trend Micro Cloud Conformity",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    scripts=['bin/thus', 'bin/thus_completer_bash.sh', 'bin/thus_completer_zsh.sh'],
-    url="https://github.com/trendmicro/thus",
+    url="https://github.com/trendmicro/thus/cc-sdk-mini",
     packages=setuptools.find_packages(),
     classifiers=[
         'Intended Audience :: Developers',
-        'Intended Audience :: System Administrators',
         'Natural Language :: English',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
@@ -46,10 +42,10 @@ if 'py2exe' in sys.argv:
             'skip_archive': True,
             'dll_excludes': ['crypt32.dll'],
             'packages': ['requests',
-                         'thus', 'ConfigParser'],
+                         'cloudonecli', 'ConfigParser'],
         }
     }
-    setup_options['console'] = ['bin/thus']
+
 
 
 setup(**setup_options)

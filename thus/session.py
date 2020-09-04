@@ -26,5 +26,7 @@ class Session():
         if self._config[profile]['SCverifyssl'].lower() == "false":
             self._configuration.verify_ssl = False
         return self._configuration
-
-
+    def BuildCCConfig(self, profile):
+        self._configuration = config.Config()
+        self._configuration.host = self._config[profile]['CCendpoint']
+        self._configuration.api_key = self._creds[profile]['CCapikey']
