@@ -8,9 +8,9 @@ All replies from the server are in JSON. Therefore [jq](https://stedolan.github.
 
 1.	Ensure you have Python 3.6.x or greater installed
 2.	In the terminal of your choice, enter the following command: 
-3.	To install for your user: `pip3 install --user thus`
-4.	To install globally: `sudo pip3 install thus`
-5.	If you're using a virtual environment, set that up first then enter: `pip3 install thus`
+3.	To install for your user: `pip3 install --user tm-thus`
+4.	To install globally: `sudo pip3 install tm-thus`
+5.	If you're using a virtual environment, set that up first then enter: `pip3 install tm-thus`
 
 ## Enable command completion
 

@@ -15,7 +15,7 @@ install_requires = [
 ]
 
 setup_options = dict(
-    name="thus",
+    name="tm-thus",
     version=__version__,
     author="Brendan Johnson",
     author_email="brendan_johnson@trendmicro.com",
