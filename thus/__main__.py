@@ -2,7 +2,7 @@
 
 import sys
 
-from cloudonecli.clidriver import main
+from thus.clidriver import main
 
 
 if __name__ == "__main__":

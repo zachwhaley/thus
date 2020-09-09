@@ -1,3 +1,5 @@
 requests>=2.22.0
 ds-sdk-mini
 smartcheck-sdk-mini
+cc-sdk-mini
+

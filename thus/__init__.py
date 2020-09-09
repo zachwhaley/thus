@@ -1,10 +1,10 @@
 #  Copyright (c) 2020. Brendan Johnson. All Rights Reserved.
 
 """
-CLOUDONECLI
+THUS
 ----
-A Universal Command Line Environment for Cloud One Services.
+A Command Line Environment for hybrid cloud security.
 """
 import os
 
-__version__ = '0.00.11'
+__version__ = '0.00.12'

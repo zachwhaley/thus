@@ -8,8 +8,10 @@ with open("README.md", "r") as fh:
 install_requires = [
     'requests',
     'PyYAML>=3.10,<5.3',
-    'ds-sdk-mini>=0.0.7',
-    'smartcheck-sdk-mini>=0.0.6'
+    'ds-sdk-mini>=0.0.11',
+    'smartcheck-sdk-mini>=0.0.8',
+    'cc-sdk-mini>=0.0.1'
+
 ]
 
 setup_options = dict(

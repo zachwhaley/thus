@@ -1,7 +1,5 @@
-#import connect
-#import config
 
-class Accounts:
+class APIKey:
     def __init__(self, config, connection):
         self._config=config
         self._connection = connection

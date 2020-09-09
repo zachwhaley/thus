@@ -1,5 +1,3 @@
-import connect
-import config
 
 class Events:
     def __init__(self, config, connection):

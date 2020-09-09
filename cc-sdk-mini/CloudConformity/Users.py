@@ -1,5 +1,3 @@
-import connect
-import config
 
 class Users:
     def __init__(self, config, connection):

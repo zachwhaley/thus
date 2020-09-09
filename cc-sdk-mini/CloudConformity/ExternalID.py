@@ -1,5 +1,3 @@
-# import connect
-# import config
 
 class ExternalID:
     def __init__(self, config, connection):
