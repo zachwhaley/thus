@@ -30,3 +30,4 @@ class Session():
         self._configuration = config.Config()
         self._configuration.host = self._config[profile]['CCendpoint']
         self._configuration.api_key = self._creds[profile]['CCapikey']
+        return self._configuration

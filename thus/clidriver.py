@@ -121,7 +121,7 @@ class CLIDriver(object):
         service = self._service.lower()
         if service == 'cc' or service == 'cloudconformity':
             config = self.session.BuildCCConfig(profile=self._profile)
-            connection = SmartCheck.connect.Connection(config=config)
+            connection = CloudConformity.connect.Connection(config=config)
             group_to_call = self.FindClass(module=CloudConformity)
             rtv = group_to_call(config=config, connection=connection)
             method_to_call = self.FindFunction(rtv=rtv)

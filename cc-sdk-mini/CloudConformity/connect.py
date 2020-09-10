@@ -13,7 +13,7 @@ class Connection:
         self._retries = 0
         self._MAX_RETRIES = 12
     def _buildheaders(self):
-        return { 'Authorization:': 'ApiKey ' + self._config.api_key,
+        return { 'Authorization': 'ApiKey ' + self._config.api_key,
                                'Content-Type': 'application/vnd.api+json',
                  'User-Agent': 'cc-sdk-mini ' + __version__ }
     def _setupSession(self):
