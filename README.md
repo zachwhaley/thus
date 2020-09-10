@@ -79,3 +79,4 @@ If you run into any issues setting up or using your Trend Micro Hybrid Cloud Sec
 - [Examples](doc/example.md)
 - [zsh completion](doc/zsh.md)
 - [Smartcheck](doc/smartcheck.md)
+- [Cloud Conformity](doc/cloudconformity.md)
