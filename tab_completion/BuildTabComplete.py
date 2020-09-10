@@ -137,7 +137,7 @@ def BuildMainFunction():
     print("     return")
     print("   fi")
     print("    if [ \"${#COMP_WORDS[@]}\" == \"4\" ]; then")
-    print("    case ${COMP_WORDS[1]} in")
+    print("    case ${service} in")
     print("        deepsecurity)")
     print("            _thus_completions_ds_functions")
     print("            return")
