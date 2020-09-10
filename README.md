@@ -40,7 +40,7 @@ For DSMapikey, create an API key in the Deep Security Manager by going to Admini
     DSMapikey = E5D08256-1998-21F4-D38B-685ABF6B7CDB:523C4B26-7BD5-D537-9495-1AB2373305DA:OKdUZZIM1ZBVXS
 
 3.	Save and close the credentials file.
-4.	Create a configuration file: ~/.cloudone/config.
+4.	Create a configuration file: ~/.thus/config.
 5.	Enter the following in the file:
 
     [default]
