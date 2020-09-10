@@ -12,7 +12,7 @@ install_requires = [
 
 setup_options = dict(
     name="cc-sdk-mini", # Replace with your own username
-    version='0.00.03',
+    version='0.00.04',
     author="Brendan Johnson",
     author_email="brendan_johnson@trendmicro.com",
     description="A lightweight SDK for Trend Micro Cloud Conformity",

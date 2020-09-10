@@ -11,7 +11,7 @@ install_requires = [
 
 setup_options = dict(
     name="smartcheck-sdk-mini",
-    version='0.00.9',
+    version='0.00.10',
     author="Brendan Johnson",
     author_email="brendan_johnson@trendmicro.com",
     description="A lightweight SDK for Trend Micro Smart Check",
