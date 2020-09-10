@@ -21,7 +21,7 @@ If you installed with `--user` run:
 `source ~/.local/bin/thus_completer_bash.sh`
 
 If you installed thus globally run:
-`source /usr/bin/thus_comleter_bash.sh`
+`source /usr/bin/thus_completer_bash.sh`
 
 To enable this on every login, add the command to your `~/.bashrc` file. 
 
