@@ -1,7 +1,7 @@
 import setuptools
 import sys
 from setuptools import setup, find_packages
-
+from DeepSecurity.__version__ import __version__
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
@@ -12,13 +12,13 @@ install_requires = [
 
 setup_options = dict(
     name="ds-sdk-mini", # Replace with your own username
-    version='0.00.12',
+    version=__version__,
     author="Brendan Johnson",
     author_email="brendan_johnson@trendmicro.com",
     description="A lightweight SDK for Trend Micro Deep Security",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/trendmicro/thus/ds-sdk-mini",
+    url="https://github.com/trendmicro/thus/tree/master/ds-sdk-mini",
     packages=setuptools.find_packages(),
     classifiers=[
         'Intended Audience :: Developers',
