@@ -33,5 +33,3 @@ class Registries:
         return self._connection.get(url='/api/registries/dashboard')
     def createRegistryScan(self, id, payload):
         return self._connection.post(url='/api/registries/{id}/scans'.format(id=id), data=payload)
-    #def listRegistryScans(self, id):
-    #    return self._connection.get('/api/registries/{id}/scans'.format(id=id))

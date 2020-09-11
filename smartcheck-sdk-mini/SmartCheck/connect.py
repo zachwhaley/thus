@@ -90,7 +90,7 @@ class Connection:
 
 
     def _renewToken(self):
-        rtv = self._session.post(self._config.host + "/sessions/"+self._loginObject['id'], verify=self._config.verify_ssl)
+        rtv = self._session.post(self._config.host + "/api/sessions/"+self._loginObject['id'], verify=self._config.verify_ssl)
         if rtv.status_code == 400:
             raise Exception(rtv.text)
         if rtv.status_code == 401:
@@ -108,7 +108,7 @@ class Connection:
                 "password": self._config.password
             }
         }
-        rtv = self._session.post(self._config.host  + "/sessions", verify=self._config.verify_ssl, json=loginObject)
+        rtv = self._session.post(self._config.host  + "/api/sessions", verify=self._config.verify_ssl, json=loginObject)
         if rtv.status_code == 400:
             raise Exception(rtv.text)
         if rtv.status_code == 401:

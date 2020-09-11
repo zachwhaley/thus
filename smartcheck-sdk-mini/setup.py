@@ -1,7 +1,7 @@
 import setuptools
 import sys
 from setuptools import setup, find_packages
-
+from SmartCheck.__version__ import __version__
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
@@ -11,7 +11,7 @@ install_requires = [
 
 setup_options = dict(
     name="smartcheck-sdk-mini",
-    version='0.00.10',
+    version=__version__,
     author="Brendan Johnson",
     author_email="brendan_johnson@trendmicro.com",
     description="A lightweight SDK for Trend Micro Smart Check",
