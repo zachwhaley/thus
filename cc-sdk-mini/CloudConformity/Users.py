@@ -9,11 +9,11 @@ class Users:
         return self._connection.get(url='/users/{id}'.format(id))
     def list(self):
         return self._connection.get(url='/users')
-    def invite(self, data):
-        return self._connection.post(url='/users', payload=data)
-    def AddSSOUser(self, data):
-        return self._connection.post(url='/users/sso', payload=data)
-    def update(self, id, data):
-        return self._connection.patch(url='/users/{id}'.format(id), payload=data)
+    def invite(self, payload):
+        return self._connection.post(url='/users', data=payload)
+    def AddSSOUser(self, payload):
+        return self._connection.post(url='/users/sso', data=payload)
+    def update(self, id, payload):
+        return self._connection.patch(url='/users/{id}'.format(id), data=payload)
     def revoke(self, id):
         return self._connection.delete(url='/users/{id}'.format(id))

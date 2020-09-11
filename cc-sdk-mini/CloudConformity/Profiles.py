@@ -7,11 +7,11 @@ class Profiles:
         return self._connection.get(url='/profiles')
     def describe(self, id):
         return self._connection.get(url='/profiles/{id}'.format(id=id))
-    def create(self, data):
-        return self._connection.post(url='/profiles', payload=data)
-    def update(self, id, data):
-        return self._connection.patch(url='/profiles/{id}'.format(id=id), payload=data)
+    def create(self, payload):
+        return self._connection.post(url='/profiles', data=payload)
+    def update(self, id, payload):
+        return self._connection.patch(url='/profiles/{id}'.format(id=id), data=payload)
     def delete(self, id):
         return self._connection.delete(url='/profiles/{id}'.format(id=id))
-    def apply(self, id, data):
-        return self._connection.post(url='/profiles/{id}/apply'.format(id=id), payload=data)
+    def apply(self, id, payload):
+        return self._connection.post(url='/profiles/{id}/apply'.format(id=id), data=payload)
