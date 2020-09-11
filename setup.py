@@ -8,9 +8,9 @@ with open("README.md", "r") as fh:
 install_requires = [
     'requests',
     'PyYAML>=3.10,<5.3',
-    'ds-sdk-mini>=0.0.11',
-    'smartcheck-sdk-mini>=0.0.8',
-    'cc-sdk-mini>=0.0.1'
+    'ds-sdk-mini>=0.0.13',
+    'smartcheck-sdk-mini>=0.0.11',
+    'cc-sdk-mini>=0.0.5'
 
 ]
 

@@ -7,4 +7,4 @@ A Command Line Environment for hybrid cloud security.
 """
 import os
 
-__version__ = '0.00.13'
+__version__ = '0.00.14'
