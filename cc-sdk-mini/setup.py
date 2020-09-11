@@ -1,7 +1,7 @@
 import setuptools
 import sys
 from setuptools import setup, find_packages
-
+from CloudConformity.__version__ import __version__
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
@@ -12,13 +12,13 @@ install_requires = [
 
 setup_options = dict(
     name="cc-sdk-mini", # Replace with your own username
-    version='0.00.04',
+    version=__version__,
     author="Brendan Johnson",
     author_email="brendan_johnson@trendmicro.com",
     description="A lightweight SDK for Trend Micro Cloud Conformity",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/trendmicro/thus/cc-sdk-mini",
+    url="https://github.com/trendmicro/thus/tree/master/cc-sdk-mini",
     packages=setuptools.find_packages(),
     classifiers=[
         'Intended Audience :: Developers',
