@@ -1,16 +1,18 @@
 # -*- coding: utf-8 -*-
 
-import click
+import logging
 from dataclasses import dataclass
 
+import click
+import CloudConformity
 import DeepSecurity
 import SmartCheck
-import CloudConformity
-import logging
 
 from session import Session
+
 LOG = logging.getLogger('thus.cli')
-LOG_FORMAT = ('%(asctime)s - %(threadName)s - %(name)s - %(levelname)s - %(message)s')
+LOG_FORMAT = (
+    '%(asctime)s - %(threadName)s - %(name)s - %(levelname)s - %(message)s')
 
 # Don't remove this line.  The idna encoding
 # is used by getaddrinfo when dealing with unicode hostnames,
@@ -23,16 +25,19 @@ LOG_FORMAT = ('%(asctime)s - %(threadName)s - %(name)s - %(levelname)s - %(messa
 # See: https://bugs.python.org/issue29288
 u''.encode('idna')
 
+
 def _set_user_agent_for_session(session):
     session.user_agent_name = 'thus-cli'
 
+
 aliases = {
-        'cc': 'cloudconformity',
-        'ws': 'workloadsecurity',
-        'cs': 'containersecurity',
-        'ds': 'deepsecurity',
-        'sc': 'smartcheck',
-        }
+    'cc': 'cloudconformity',
+    'ws': 'workloadsecurity',
+    'cs': 'containersecurity',
+    'ds': 'deepsecurity',
+    'sc': 'smartcheck',
+}
+
 
 class AliasedGroup(click.Group):
 
@@ -46,14 +51,16 @@ class AliasedGroup(click.Group):
             return None
         return click.Group.get_command(self, ctx, aliases[cmd_name])
 
+
 def findclass(module, command):
-    listing = dir (module)
+    listing = dir(module)
     for c in listing:
         if c.lower() == command.lower():
             command = c
             break
     classToCall = getattr(module, command)
     return classToCall
+
 
 def findfunction(rtv, subcommand):
     listing = dir(rtv)
@@ -63,6 +70,7 @@ def findfunction(rtv, subcommand):
             break
     method_to_call = getattr(rtv, subcommand)
     return method_to_call
+
 
 @click.command(cls=AliasedGroup)
 @click.option('--profile', help='AWS profile name')
@@ -84,36 +92,38 @@ def cloudconformity(ctx, subcommand, arguments):
     rtv = method_to_call(*arguments)
 
 
-#@click.command(short_help='alias: ws')
-#def workloadsecurity():
+# @click.command(short_help='alias: ws')
+# def workloadsecurity():
 #    click.echo('workloadsecurity')
 #
 #
-#@click.command(short_help='alias: cs')
-#def containersecurity():
+# @click.command(short_help='alias: cs')
+# def containersecurity():
 #    click.echo('containersecurity')
 #
-#@click.command(short_help='alias: ds')
-#def deepsecurity():
+# @click.command(short_help='alias: ds')
+# def deepsecurity():
 #    click.echo('deepsecurity')
 #
 #
-#@click.command(short_help='alias: sc')
-#def smartcheck():
+# @click.command(short_help='alias: sc')
+# def smartcheck():
 #    click.echo('smartcheck')
 
 thus.add_command(cloudconformity)
-#thus.add_command(workloadsecurity)
-#thus.add_command(containersecurity)
-#thus.add_command(deepsecurity)
-#thus.add_command(smartcheck)
+# thus.add_command(workloadsecurity)
+# thus.add_command(containersecurity)
+# thus.add_command(deepsecurity)
+# thus.add_command(smartcheck)
+
 
 @dataclass
 class CliObj:
     session: Session
     profile: str = None
 
+
 if __name__ == '__main__':
-    session =  Session()
+    session = Session()
     _set_user_agent_for_session(session)
     thus(obj=CliObj(session))
